@@ -1,1 +1,915 @@
-Coming soon!
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Automaticaly generated content, please update scripts/htmlgen.py for any change -->
+   <head>
+      <meta charset="UTF-8">
+      <title align="center">FBWave audio demo"</title>
+      <style type="text/css">
+        body, input, select, td, li, div, textarea, p {
+        	font-size: 11px;
+        	line-height: 16px;
+        	font-family: verdana, arial, sans-serif;
+        }
+
+        body {
+        	margin:5px;
+        	background-color:white;
+        }
+
+        h1 {
+        	font-size:16px;
+        	font-weight:bold;
+        }
+
+        h2 {
+        	font-size:14px;
+        	font-weight:bold;
+        }
+      </style>
+   </head>
+   <body>
+      <article>
+         <header>
+            <h1>FBWave: Efficient and Scalable Neural Vocoders for Streaming Text-To-Speech on the Edge</h1>
+         </header>
+      </article>
+
+      <div>
+      Website license info sheet <a href = https://yolanda-gao.github.io/Interactive-Style-TTS/Interactive_TTS_license.pdf >pdf</a>
+      </div>
+
+
+      <div>
+        <h2>Abstract</h2>
+        <p> 
+	Nowadays more and more applications can benefit from edge-based text-to-speech (TTS). However, most existing TTS models are too computationally expensive and are not flexible enough to be deployed on the diverse variety of edge devices with their equally diverse computational capacities. To address this, we propose FBWave, a family of efficient and scalable neural vocoders that can achieve optimal performance-efficiency trade-offs for different edge devices. FBWave is a hybrid flow-based generative model that combines the advantages of autoregressive and non-autoregressive models. It produces high quality audio and supports streaming during inference while remaining highly computationally efficient. Our experiments show that FBWave can achieve similar audio quality to WaveRNN while reducing MACs by 40x. More efficient variants of FBWave can achieve up to 109x fewer MACs while still delivering acceptable audio quality.
+        </p> 
+      </div>
+      <h2> Contents </h2>
+        <p>
+	For faster loading, we only show 10 audio samples per model on this page. More audio samples can be downloaded from <a href = https://github.com/bichenwu09/bichenwu09.github.io </a>here.
+        </p>
+
+
+    <div>
+    <h2> fbw-scaling </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>fbw-4.6G</th>
+        <th>fbw-3.7G</th>
+        <th>fbw-3.2G</th>
+        <th>fbw-5.7G</th>
+        <th>fbw-2.6G</th>
+        <th>fbw-1.74G</th> 
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-4.6G/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.7G/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-3.2G/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-5.7G/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-2.6G/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./fbw-scaling/fbw-1.74G/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+
+            </table>
+        </div>
+        
+
+    <div>
+    <h2> baselines </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>fbw-4.6G</th>
+        <th>wavernn_dense</th>
+        <th>groundtruth</th>
+        <th>wavernn_sparse</th>
+        <th>parametric</th> 
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/arctic_a0057.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/arctic_a0210.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/arctic_a0271.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/arctic_a0281.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/arctic_a0512.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/arctic_a0542.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/arctic_b0301.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/arctic_b0353.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/arctic_b0531.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+<tr>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/fbw-4.6G/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_dense/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/groundtruth/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/wavernn_sparse/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+
+    <td>
+        <audio controls style="width: 200px;">
+        <source src=./baselines/parametric/assistant_0002.wav type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+    </td>
+</tr>
+
+            </table>
+        </div>
+        
+
+   </body>
+</html>
+
